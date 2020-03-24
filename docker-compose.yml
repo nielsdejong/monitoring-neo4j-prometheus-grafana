@@ -6,7 +6,7 @@ networks:
 services:
 
   neo4j-core1:
-    image: neo4j:enterprise
+    image: neo4j:3.5-enterprise
     networks:
       - lan
     ports:
@@ -34,7 +34,7 @@ services:
     restart: unless-stopped
 
   neo4j-core2:
-    image: neo4j:enterprise
+    image: neo4j:3.5-enterprise
     networks:
       - lan
     ports:
@@ -61,7 +61,7 @@ services:
     restart: unless-stopped
 
   neo4j-core3:
-    image: neo4j:enterprise
+    image: neo4j:3.5-enterprise
     networks:
       - lan
     ports:
@@ -88,7 +88,7 @@ services:
     restart: unless-stopped
 
   neo4j-replica1:
-    image: neo4j:enterprise
+    image: neo4j:3.5-enterprise
     networks:
       - lan
     ports:
@@ -141,7 +141,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:6.3.7
     depends_on:
       - prometheus
     networks:
